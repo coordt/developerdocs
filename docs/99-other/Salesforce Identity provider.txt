@@ -1,0 +1,9 @@
+Salesforce Identity provider
+    https://help.salesforce.com/htviewhelpdoc?id=identity_provider_about.htm&siteLang=en_US
+    https://help.salesforce.com/HTViewHelpDoc?id=identity_provider_enable.htm&language=en_US
+
+    - Provide login and authentication for user
+    - Uses SAML
+        - https://pypi.python.org/pypi/djangosaml2
+        - https://github.com/KristianOellegaard/django-saml-service-provider
+        - https://github.com/onelogin/python-saml

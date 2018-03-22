@@ -1,0 +1,65 @@
+# Project Layout
+
+- `ansible`: Various files used to create the Vagrant virtual machine
+- `apps`: Project-specific Django applications.
+    - `api`: The project's API, using Django REST framework
+    - `bundle`: A legacy application that needs to be removed.
+    - `collections_extensions`: Drives the "topics" portion of the site. It is a customized implementation of django-dynamiccollections.
+    - `core_content`: A legacy app. Currently we use the Gallery model. Should be refactored and extracted into an external package/Django app.
+    - `daily_content`: Renders the scheduled daily content. The content is schduled in the admin via django-events.
+    - `edgate`: Handles the transfer of education content to EdGate.
+    - `education`: A set of legacy code that had been the implementation of the education site. Should be removed.
+    - `educms`: This is where all the plugins for Django-CMS live.
+    - `games`: An app the was created to drive an educational interactive.
+    - `innovation_lab`: The app that drives the `/innovation-lab/`. Was created to support a NG Channel program.
+    - `open_html`: The Django app that handles the "Open HTML" content type. Should be extracted into an external package/Django app.
+    - `publishing`: A legacy application that should be removed.
+    - `queued_storage`: A forked version of django-queued-storage that handles all the storage of the site. There are special additions that make it easier to move remote files to the loval machine for manipulation and copying back to remote storage.
+    - `redeem`: This code allows a user to enter a redeem code which triggers an arbitrary action on the backend, such as sign  the user up for a subscription to a magazine.
+    - `redirects`: Custom URL redirection.
+    - `search`:  The app that handles the site indexing and searching.
+    - `site_ext`: Various extra glue code to implement various tasks and functions for the site.
+    - `utils`: Various utilities used by legacy code.
+    - `uuid_nk`: Allows the addition of an automatic UUID field on models that don't normally have them.
+    - `widgets`: HTML form widgets for the site admin.
+    - `sitemaps.py`: The site's sitemap implementation.
+- `bin`: This directory contains useful scripts for developers.
+- `bower_components`: `bower` installs its components into this directory.
+- `conf`: Various server configurations.
+- `deploy`: Contains the configurations and scripts for deploying the project
+    - `prod`: The ECS configuration for Production deployments
+    - `staging`: The ECS configuration for Staging deployments
+- `docs`: Documentation. Built with `npm run-script build` or served with `npm run-script serve`
+    - `book.json`: The GitBook configuration
+    - `dist`: The built HTML documentation
+    - `src`: The documentation source. Uses GitBook conventions for Markdown.
+- `locale`: Compiled language translations.
+- `node_modules`: This is where `node.js` stores its installed modules.
+- `scripts`: Various Python or bash scripts that need to be run on the production server. This is typically done during very large or complex migrations, or to automate a one-time process that is cumbersome for producers.
+- `settings`: Django settings. 
+    - `base.py`: Most of the settings go into this file. Other settings files will import this file and override the settings as appropriate.
+    - `local_settings.py.template`: Default developer and development settings. This file should be copied to `local_settings.py` when first setting up development. You can customize `local_settings.py`, as it is ignored by `git`.
+    - `production.py`: Settings for production servers.
+    - `test.py.template`: A template used when creating a test server instance to create `test.py`, the settings used on the test instance.
+    - `vagrant.py`: Settings when using Vagrant.
+- `sites`: Customized versions of the primary site. These "micro-sites" run off the same code, but have their own database and server configurations. They override some of the default templates to allow the site to have its own look and feel.
+- `static`: Static CSS, JavaScript and images used in the site.
+- `templates`: The templates used in the site. See the template documentation for more information.
+- `urlpatterns`: Complex URL patterns imported into `urls.py`, grouped by application. Just to make the `urls.py` file a bit smaller and easier to read.
+- `.editorconfig`: [EditorConfig](http://editorconfig.org/) helps developers define and maintain consistent coding styles between different editors and IDEs. 
+- `.gitattributes`: Automatically sets attributes in `git` based on paths.
+- `.gitignore`: Files and file name patterns to ignore when adding files to the `git` repo.
+- `bootstrap.py`: This script is used when deploying to set up its isolated Python environment and install its requirements.
+- `bower.json`: The packages and their versions that `bower` should install and maintain. `bower` installs them in `bower_components`.
+- `fabfile.py`: The scripts and tasks we use to perform tasks on remote servers, using the [Fabric](http://www.fabfile.org/) library.
+- `Gruntfile.js`: The definition of tasks used to manage the various NGKit, `bower`-installed pacakges and other front-end tasks.
+- `manage.py`: The default command entry-point for Django.
+- `newrelic.ini`: Our configuration for the New Relic monitoring service.
+- `package.json`: The `npm` configuration for the various packages and their versions that `npm` will install into `node_modules`.
+- `requirements.txt`: The Python packages and their versions that are necessary for the project to run.
+- `setup.cfg`: This provides defaults for Python-specific linting of code.
+- `start_gunicorn.sh`: A script used to start the gUnicorn WSGI server on a production or test server.
+- `start_rqscheduler.sh`: A script used to start the RQ Scheduler service on a production or test server.
+- `start_rqworker.sh`: A script used to start the RQ worker service on a production or test server.
+- `urls.py`: The primary Django URL configuration.
+- `Vagrantfile`: The configuration for running the project within Vagrant.

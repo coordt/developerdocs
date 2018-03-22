@@ -1,0 +1,20 @@
+- [Home](/)
+- Setup
+    - [First things to do](01-setup/initial.md)
+    - [Backend Setup](01-setup/backend.md)
+    - [Using Vagrant](01-setup/vagrant.md)
+    - [CoolOrg's Python Package Index](01-setup/pypi.md)
+    - [SSH configuration](01-setup/servers.md)
+    - [Project Description](01-setup/project-description.md)
+- Style
+    - [Principles](02-style/principles.md)
+    - [Python Coding Style](02-style/coding-style.md)
+    - [Django Model Styleguide](02-style/model-styleguide.md)
+- Search Setup
+    - [Introduction](03-search/README.md)
+    - [Search Index Field Reference](03-search/searchindex.md)
+- Testing
+    - [Testing Packages](04-testing/setting-up-packages.md)
+    - [Setting up Tox](04-testing/setting-up-tox.md)
+    - [Testing with Databases](04-testing/testing-with-databases.md)
+    - [Testing Branches](04-testing/testingbranches.md)

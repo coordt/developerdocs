@@ -1,0 +1,33 @@
+Glossary term embed update
+
+1. Create a unique, numbered slug that is used for id purposes in markup and API
+2. Modify API to search for or use the glossary slug
+
+Rewrite glossify plugin for CKEditor
+------------------------------------
+1. Uses an <a>-like modular window
+2. Calls API with selected content/wrapped content to get available words
+3. Has ability to create new glossary term (opens window to /reference/glossaryterm/add/)
+4. Marks up content
+
+Write JS module to display popovers
+-----------------------------------
+1. Looks for data-term
+2. Adds class="ng-glossary-term"
+3. Adds a popover as if it had a data-ng-popover attribute
+4. Source of the attribute is the API with the data-term attribute, and a template
+
+Replace Markup
+--------------
+1. Find out which text fields are glossified
+2. Replace markup in various fields
+   from <a class="tipHelp">......</a>
+   to <span data-term="<unique-slug>">......</span>
+
+
+Questions
+---------
+- Should there be interaction between Vocabulary and the glossification function?
+    - Suggest: Not specifically. It would provide a strong implementation dependency (to insert glossary in the model)
+    - Better: Parse glossified fields and add vocabulary at save time
+        - Would be only additive: You can have words in the glossary that aren't glossified. All deletions must be manual.
