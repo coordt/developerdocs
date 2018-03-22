@@ -1,6 +1,6 @@
 # SSH Configuration
 
-Add this bit of text to your `~/.ssh/config` file. It will allow you to access the test server by its name. For example `ssh dmi-test`.
+Add this bit of text to your `~/.ssh/config` file. It will allow you to access the test server by its name. For example `ssh coolorg-test`.
 
 ```
 Host bastion

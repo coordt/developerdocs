@@ -16,7 +16,7 @@ based on one or more tags/keywords/concepts.
 
 ### Index pages
 
-An index page is any page where we want to list everything that has attribute "x." Typically each type of content (e.g. Activity, Encyclopedic Entry, Article) has and index page, but the implementation is generic enough to allow any attribute.
+An index page is any page where we want to list everything that has attribute "x." Typically each type of content (e.g. Article, Event, Profile) has an index page, but the implementation is generic enough to allow any attribute.
 
 The only limitation is one of URL handling so things don't get too confusing.
 
@@ -28,7 +28,7 @@ This is the general search across the entire site.
 
 This is a search implementation that provides extra capabilities, for example filtering on a specific set of attributes.
 
-Education Search is an example of specialized search, in that it allows filtering by school grades and ages.
+"Education Search" is an example of specialized search, in that it allows filtering by school grades and ages.
 
 
 ## Search Implementation

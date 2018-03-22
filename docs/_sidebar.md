@@ -18,3 +18,6 @@
     - [Setting up Tox](04-testing/setting-up-tox.md)
     - [Testing with Databases](04-testing/testing-with-databases.md)
     - [Testing Branches](04-testing/testingbranches.md)
+- Procedures
+    - [Development](05-procedures/development.md)
+    - [Infrastructure](05-procedures/infrastructure.md)

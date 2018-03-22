@@ -3,19 +3,10 @@
 - `ansible`: Various files used to create the Vagrant virtual machine
 - `apps`: Project-specific Django applications.
     - `api`: The project's API, using Django REST framework
-    - `bundle`: A legacy application that needs to be removed.
-    - `collections_extensions`: Drives the "topics" portion of the site. It is a customized implementation of django-dynamiccollections.
-    - `core_content`: A legacy app. Currently we use the Gallery model. Should be refactored and extracted into an external package/Django app.
     - `daily_content`: Renders the scheduled daily content. The content is schduled in the admin via django-events.
-    - `edgate`: Handles the transfer of education content to EdGate.
-    - `education`: A set of legacy code that had been the implementation of the education site. Should be removed.
-    - `educms`: This is where all the plugins for Django-CMS live.
-    - `games`: An app the was created to drive an educational interactive.
-    - `innovation_lab`: The app that drives the `/innovation-lab/`. Was created to support a NG Channel program.
+    - `cmsplugins`: This is where all the plugins for Django-CMS live.
     - `open_html`: The Django app that handles the "Open HTML" content type. Should be extracted into an external package/Django app.
-    - `publishing`: A legacy application that should be removed.
-    - `queued_storage`: A forked version of django-queued-storage that handles all the storage of the site. There are special additions that make it easier to move remote files to the loval machine for manipulation and copying back to remote storage.
-    - `redeem`: This code allows a user to enter a redeem code which triggers an arbitrary action on the backend, such as sign  the user up for a subscription to a magazine.
+    - `redeem`: This code allows a user to enter a redeem code which triggers an arbitrary action on the backend, such as sign the user up for a subscription to a magazine.
     - `redirects`: Custom URL redirection.
     - `search`:  The app that handles the site indexing and searching.
     - `site_ext`: Various extra glue code to implement various tasks and functions for the site.
@@ -54,7 +45,6 @@
 - `fabfile.py`: The scripts and tasks we use to perform tasks on remote servers, using the [Fabric](http://www.fabfile.org/) library.
 - `Gruntfile.js`: The definition of tasks used to manage the various NGKit, `bower`-installed pacakges and other front-end tasks.
 - `manage.py`: The default command entry-point for Django.
-- `newrelic.ini`: Our configuration for the New Relic monitoring service.
 - `package.json`: The `npm` configuration for the various packages and their versions that `npm` will install into `node_modules`.
 - `requirements.txt`: The Python packages and their versions that are necessary for the project to run.
 - `setup.cfg`: This provides defaults for Python-specific linting of code.

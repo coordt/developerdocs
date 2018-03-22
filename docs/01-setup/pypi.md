@@ -11,7 +11,7 @@ username=coolorgdev
 password=TopSeeecret
 ```
 
-The following is a full example of a ~/.pypirc file.
+The following is a full example of a `~/.pypirc` file.
 
 
 ```ini
@@ -26,7 +26,7 @@ username=my_username
 password=my_password
 
 [coolorg]
-repository:https://pypi.coolorg.org/simple/
+repository=https://pypi.coolorg.org/simple/
 username=coolorgdev
 password=TopSeeecret
 ```
@@ -34,7 +34,7 @@ password=TopSeeecret
 # Submitting packages
 
 Apps are uploaded uploaded to GitHub and PyPI. After your `~/
-.pypirc` file is properly configured you can upload the project to the NatGeo
+.pypirc` file is properly configured you can upload the project to the CoolOrg
 PyPI with the following snippet.
 
 
