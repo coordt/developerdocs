@@ -10,6 +10,7 @@
     - [Principles](02-style/principles.md)
     - [Python Coding Style](02-style/coding-style.md)
     - [Django Model Styleguide](02-style/model-styleguide.md)
+    - [Python Best Practices](02-style/best-practices.md)
 - Search Setup
     - [Introduction](03-search/README.md)
     - [Search Index Field Reference](03-search/searchindex.md)
